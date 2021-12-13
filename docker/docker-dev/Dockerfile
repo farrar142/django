@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY wait.sh .
 COPY requirements.txt .
-COPY ../../ .
+COPY . .
 
 RUN pip3 install -r requirements.txt \
     && apt-get update \
