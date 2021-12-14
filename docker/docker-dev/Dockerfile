@@ -7,6 +7,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /usr/src/app
 
 COPY wait.sh .
+COPY isdockerrun.sh .
 COPY requirements.txt .
 COPY ../../. .
 
