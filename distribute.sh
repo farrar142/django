@@ -11,7 +11,7 @@ echo "## Automation docker-web build and run ##"
 
 # remove container
 echo "=> Remove previous container..."
-cd docker/docker-dev
+# cd docker/docker-dev
 docker rm -f ${web_container_name}
 
 # remove image
