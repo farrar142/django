@@ -15,7 +15,5 @@ RUN pip3 install -r requirements.txt \
     && apt-get install netcat-openbsd -y
 
 ENTRYPOINT sudo chmod +x wait.sh \
-    && sudo ./wait.sh \
-    && sudo chmod +x run_python\
-    && sudo sh run_python.sh
+    && sudo ./wait.sh
 EXPOSE 8000
