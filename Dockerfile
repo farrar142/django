@@ -16,9 +16,4 @@ RUN pip3 install -r requirements.txt \
 
 ENTRYPOINT sudo chmod +x wait.sh \
     && sudo ./wait.sh \
-    && sudo wait \
-    && sudo python manage.py makemigrations \
-    && sudo python manage.py migrate \
-    && sudo python manage.py runserver 0.0.0.0:8000
 EXPOSE 8000
-#

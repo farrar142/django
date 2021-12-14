@@ -1,3 +1,0 @@
-CMD 속성,
-Experimental,
-Enable new Ctrl key shortcuts활성화
