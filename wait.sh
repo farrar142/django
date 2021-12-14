@@ -12,6 +12,7 @@ echo -e "\033[36m"== mariadb_status[Ready] =="\033[0m"
 
 # Apply database migrations
 echo -e "\033[36m"== Apply database migrations =="\033[0m" 
+python manage.py makemigrations
 python manage.py migrate
 
 echo -e "\033[36m"== Start server =="\033[0m"
