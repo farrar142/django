@@ -5,7 +5,7 @@ docker_username="farrar142"
 web_image_name="docker-dev_web"
 web_container_name="web"
 version="1"
-port=8000 # Default MySQL Port: 3306
+port=8000 # Default django Port: 8000
 
 echo "## Automation docker-web build and run ##"
 
@@ -17,9 +17,6 @@ docker rm -f ${web_container_name}
 echo "=> Remove previous image..."
 docker rmi -f ${docker_username}/${web_image_name}:${version}
 
-# new-build/re-build docker image
-# docker build --tag ${docker_username}/${web_image_name}:${version} .
-#
 # Run container
 echo "=> Build new image..."
 echo "=> Run container..."
