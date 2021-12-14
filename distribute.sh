@@ -24,5 +24,3 @@ docker rmi -f ${docker_username}/${web_image_name}:${version}
 echo "=> Build new image..."
 echo "=> Run container..."
 docker-compose up -d
-chmod +x run_python
-sh run_python.sh
