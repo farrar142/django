@@ -18,9 +18,9 @@ echo "=> Remove previous image..."
 docker rmi -f ${docker_username}/${web_image_name}:${version}
 
 # new-build/re-build docker image
-echo "=> Build new image..."
 # docker build --tag ${docker_username}/${web_image_name}:${version} .
 #
 # Run container
+echo "=> Build new image..."
 echo "=> Run container..."
 docker-compose up -d
