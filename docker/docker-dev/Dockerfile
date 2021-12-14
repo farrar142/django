@@ -11,7 +11,7 @@ COPY requirements.txt .
 COPY ../../. .
 
 RUN pip3 install -r requirements.txt \
-    && apt-get update \
+    && apt-get update
 
 ENTRYPOINT python manage.py runserver 0.0.0.0:8000
 
