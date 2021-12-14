@@ -11,10 +11,10 @@ COPY requirements.txt .
 COPY ../../. .
 
 RUN pip3 install -r requirements.txt \
-    && apt-get update
+    && apt-get update \
+    && ln -s local_user/jenkins_home/build var/jenkins_home/build
 
-ENTRYPOINT ln -s local_user/jenkins_home/build var/jenkins_home/build \
-    && python manage.py runserver 0.0.0.0:8000
+ENTRYPOINT python manage.py runserver 0.0.0.0:8000
 
 EXPOSE 8000
 #
