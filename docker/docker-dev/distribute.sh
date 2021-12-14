@@ -1,5 +1,5 @@
-# Build N Run DB Container
-# 2020. 09. 18 Zini
+# Build N Run WEB Container
+# 2021. 12. 14 Farrar142
 ##
 docker_username="farrar142"
 web_image_name="docker-dev_web"
@@ -7,7 +7,7 @@ web_container_name="web"
 version="1"
 port=8000 # Default MySQL Port: 3306
 
-echo "## Automation docker-database build and run ##"
+echo "## Automation docker-web build and run ##"
 
 # remove container
 echo "=> Remove previous container..."
@@ -19,7 +19,7 @@ docker rmi -f ${docker_username}/${web_image_name}:${version}
 
 # new-build/re-build docker image
 echo "=> Build new image..."
-docker build --tag ${docker_username}/${web_image_name}:${version} .
+# docker build --tag ${docker_username}/${web_image_name}:${version} .
 
 # Run container
 echo "=> Run container..."
