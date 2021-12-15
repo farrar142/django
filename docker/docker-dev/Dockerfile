@@ -15,8 +15,7 @@ RUN pip3 install -r requirements.txt \
     && apt-get upgrade \
     && apt-get install netcat-openbsd -y
 
-# ENTRYPOINT chmod +x wait.sh \
-#     && ./wait.sh
-ENTRYPOINT python manage.py runserver 0.0.0.0:8000
+ENTRYPOINT chmod +x wait.sh \
+    && ./wait.sh
 EXPOSE 8000
 #
