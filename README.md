@@ -9,13 +9,3 @@
 ##### 최소 30초에서
 ### DB까지 빌드시
 ##### 최대 4분
-
-# 예상 시나리오
-
-### 외부 EC2(niginx Docker (jenkins Docker(team1),jenkins Docker(team2),jenkins Docker(team3),jenkins Docker(team4)))
-```
-${EC2IPv4}:80/${teamN}/${ProjectName}
-```
-EC2의 nginx 가 ${EC2IPv4}:80/${teamN} 까지의 경로를 파싱해서 각 포트별로 나눠줌.
-위에서 나눠진 포트를 각 도커 컨테이너로 할당함. 10001 = team1, 10002 = team2
-${EC2IPv4}:80/${teamN} = 
