@@ -21,6 +21,6 @@ import pybo.views
 urlpatterns = [
     path('',pybo.views.main_index,name='index'),
     path('pybo/', include('pybo.urls')),
-    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
+    path('common/',include('common.urls')),
 ]
