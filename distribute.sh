@@ -2,7 +2,7 @@
 # 2021. 12. 14 Farrar142
 ##
 docker_username="farrar142"
-web_image_name="sampleproject_web"
+web_image_name="sampleproject_web" ##젠킨스 아이템 이름
 web_container_name="web"
 version="1"
 port=8000 # Default django Port: 8000
@@ -22,3 +22,5 @@ docker rmi -f ${docker_username}/${web_image_name}:${version}
 echo "=> Build new image..."#
 echo "=> Run container..."
 docker-compose up -d
+
+#
