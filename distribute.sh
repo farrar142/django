@@ -2,7 +2,7 @@
 # 2021. 12. 14 Farrar142
 ##
 docker_username="farrar142"
-web_image_name="ec2_cicd_web"
+web_image_name="sampleproject_web"
 web_container_name="web"
 version="1"
 port=8000 # Default django Port: 8000
