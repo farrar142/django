@@ -3,7 +3,7 @@ import locale
 import subprocess
 
 os_encoding = locale.getpreferredencoding()
-print(f"System Encdoing :: {os_encoding}")
+print("System Encdoing :: ", os_encoding)
 cmd = "docker ps -a"
 po = subprocess.Popen(cmd, stdout=subprocess.PIPE)
 decoded = po.stdout.read().decode('utf-8').strip()
@@ -16,7 +16,7 @@ if tables:
             c.remove('')
         try:
             print(
-                f"Container Name :: {c[-1]}, Container ID :: {c[0]},  Image Name :: {c[1]}")
+                f"Container Name :: ", c[-1], ", Container ID :: ", c[0], ", Image Name :: ", c[1])
         except:
             pass
 else:
