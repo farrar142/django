@@ -1,10 +1,9 @@
-# -*- coding: UTF-8 -*-
 import os
 import locale
 import subprocess
 
 os_encoding = locale.getpreferredencoding()
-print(f"시스템 인코딩 :: {os_encoding}")
+print(f"System Encdoing :: {os_encoding}")
 cmd = "docker ps -a"
 po = subprocess.Popen(cmd, stdout=subprocess.PIPE)
 decoded = po.stdout.read().decode('utf-8').strip()
@@ -16,10 +15,12 @@ if tables:
         while '' in c:
             c.remove('')
         try:
-            print(f"컨테이너 이름 :: {c[-1]}, 컨테이너 ID :: {c[0]},  이미지 이름 :: {c[1]}")
+            print(
+                f"Container Name :: {c[-1]}, Container ID :: {c[0]},  Image Name :: {c[1]}")
         except:
             pass
 else:
-    print("이미지 없음")
+    print("No Images")
+#
 #
 #
