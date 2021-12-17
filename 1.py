@@ -21,4 +21,3 @@ if tables:
             pass
 else:
     print("이미지 없음")
-#
