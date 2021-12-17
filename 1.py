@@ -16,7 +16,7 @@ if tables:
             c.remove('')
         try:
             print(
-                f"Container Name :: ", c[-1], ", Container ID :: ", c[0], ", Image Name :: ", c[1])
+                "Container Name :: ", c[-1], ", Container ID :: ", c[0], ", Image Name :: ", c[1])
         except:
             pass
 else:
