@@ -4,7 +4,8 @@ import subprocess
 
 os_encoding = locale.getpreferredencoding()
 print("System Encdoing :: ", os_encoding)
-po = os.popen('docker ps -a')
+cmd = "docker ps -a"
+po = subprocess.Popen(cmd, stdout=subprocess.PIPE)
 decoded = po.stdout.read().decode('utf-8').strip()
 tables = decoded.split("\n")
 column = tables.pop(0)
